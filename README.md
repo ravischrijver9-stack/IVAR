@@ -33,7 +33,7 @@
   </div>
 
   <script>
-    // ✅ Jouw nieuwe Firebase-config
+    // ✅ Jouw Firebase-config
     const firebaseConfig = {
       apiKey: "AIzaSyAebutJDPHTFPhGbUOb__ZuRWXJFNrIupE",
       authDomain: "ivar-4be46.firebaseapp.com",
