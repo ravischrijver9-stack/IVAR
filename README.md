@@ -33,14 +33,14 @@
   </div>
 
   <script>
-    // 🔑 Firebase config
+    // ✅ Jouw nieuwe Firebase-config
     const firebaseConfig = {
-      apiKey: "AIzaSyBTwCREcXqY_B_amU4yMZmIhn9a2WxfDto",
-      authDomain: "ai-bot-f8b5f.firebaseapp.com",
-      projectId: "ai-bot-f8b5f",
-      storageBucket: "ai-bot-f8b5f.appspot.com",
-      messagingSenderId: "413591691577",
-      appId: "1:413591691577:web:f5e28ecf2811a819a9c8e8"
+      apiKey: "AIzaSyAebutJDPHTFPhGbUOb__ZuRWXJFNrIupE",
+      authDomain: "ivar-4be46.firebaseapp.com",
+      projectId: "ivar-4be46",
+      storageBucket: "ivar-4be46.appspot.com",
+      messagingSenderId: "887327729474",
+      appId: "1:887327729474:web:ed5cfac33265a51d070adb"
     };
 
     firebase.initializeApp(firebaseConfig);
@@ -55,7 +55,7 @@
       auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL).then(() => {
         const provider = new firebase.auth.GoogleAuthProvider();
         return auth.signInWithPopup(provider);
-      });
+      }).catch(console.error);
     });
 
     logoutBtn.addEventListener("click", () => {
