@@ -33,6 +33,7 @@
   </div>
 
   <script>
+    // 🔑 Firebase config
     const firebaseConfig = {
       apiKey: "AIzaSyBTwCREcXqY_B_amU4yMZmIhn9a2WxfDto",
       authDomain: "ai-bot-f8b5f.firebaseapp.com",
@@ -51,8 +52,10 @@
     const chatSection = document.getElementById("chat-section");
 
     loginBtn.addEventListener("click", () => {
-      const provider = new firebase.auth.GoogleAuthProvider();
-      auth.signInWithPopup(provider);
+      auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL).then(() => {
+        const provider = new firebase.auth.GoogleAuthProvider();
+        return auth.signInWithPopup(provider);
+      });
     });
 
     logoutBtn.addEventListener("click", () => {
@@ -71,6 +74,7 @@
       }
     });
 
+    // 🤖 IVAR AI
     const API_KEY = "AIzaSyDYCpPo7jRa8vJDbH3P5R1eopFo5koGPAo";
     const API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=";
 
